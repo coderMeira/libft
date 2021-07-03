@@ -1,35 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_stoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fmeira <fmeira@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/18 20:08:19 by fmeira            #+#    #+#             */
-/*   Updated: 2021/07/03 20:13:34 by fmeira           ###   ########.fr       */
+/*   Created: 2021/05/21 17:08:06 by fmeira            #+#    #+#             */
+/*   Updated: 2021/07/02 02:13:07 by fmeira           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_stoi(char *str)
 {
-	unsigned char	*p;
-	unsigned char	*k;
-	int				i;
+	int		signal;
+	int		result;
+	char	*p;
 
-	p = (unsigned char *)s1;
-	k = (unsigned char *)s2;
-	i = 0;
-	if (n == 0)
-		return (0);
-	while (n-- && p && k)
+	p = (char *)str;
+	signal = 1;
+	result = 0;
+	while (*p == ' ' || *p == '\t' || *p == '\n'
+		|| *p == '\r' || *p == '\v' || *p == '\f')
+		p++;
+	if (*p == '+')
+		p++;
+	else if (*p == '-')
 	{
-		if (p[i] != k[i])
-			return (p[i] - k[i]);
-		i++;
-		if (!p[i])
+		p++;
+		signal = -1;
+	}
+	while (*p > 47 && *p < 58)
+	{
+		result = result * 10 + *p++ - 48;
+		if (result * signal < -2147483648)
 			return (0);
 	}
-	return (0);
+	return (result * signal);
 }
