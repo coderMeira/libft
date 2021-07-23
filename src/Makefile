@@ -6,7 +6,7 @@
 #    By: fmeira <fmeira@student.42lisboa.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/18 20:38:48 by fmeira            #+#    #+#              #
-#    Updated: 2021/07/23 14:58:36 by fmeira           ###   ########.fr        #
+#    Updated: 2021/07/23 17:58:18 by fmeira           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,6 @@ clean:
 
 .PHONY: clean
 fclean: clean
-	rm -f ${NAME}
+	rm -f ../bin/${NAME}
 
 re: fclean all
