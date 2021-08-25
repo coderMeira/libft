@@ -19,7 +19,7 @@ OBJ = ${SRC:.c=.o}
 FLAGS = -Wall -Wextra -Werror
 
 ${NAME}: ${OBJ}
-	ar -rs ${NAME} ${OBJ} && mv $(NAME) ../bin
+	mkdir -p ../bin && ar -rs ${NAME} ${OBJ} && mv $(NAME) ../bin
 
 %.o: %.c
 	gcc ${FLAGS} -c -o $@ $<
@@ -36,3 +36,4 @@ fclean: clean
 	rm -f ../bin/${NAME}
 
 re: fclean all
+
