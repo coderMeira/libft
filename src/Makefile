@@ -6,7 +6,7 @@
 #    By: fmeira <fmeira@student.42lisboa.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/18 20:38:48 by fmeira            #+#    #+#              #
-#    Updated: 2021/08/29 22:57:36 by fmeira           ###   ########.fr        #
+#    Updated: 2021/08/29 22:59:19 by fmeira           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,4 +38,5 @@ fclean: clean
 	@echo "Libft cleaned"
 
 re: fclean all
+
 
