@@ -6,7 +6,7 @@
 /*   By: fmeira <fmeira@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/08 20:31:55 by fmeira            #+#    #+#             */
-/*   Updated: 2021/08/29 23:15:08 by fmeira           ###   ########.fr       */
+/*   Updated: 2021/08/29 23:41:19 by fmeira           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>
+# include "get_next_line.h"
+
 
 # ifndef BUFFER_SIZE
 # define BUFFER_SIZE 1
