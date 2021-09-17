@@ -6,7 +6,7 @@
 /*   By: fmeira <fmeira@student.42lisboa.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 20:04:18 by fmeira            #+#    #+#             */
-/*   Updated: 2021/09/07 14:59:49 by fmeira           ###   ########.fr       */
+/*   Updated: 2021/09/16 22:29:16 by fmeira           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,15 @@ typedef enum s_bool
 	false,
 	true
 }	t_bool;
+
+typedef struct s_gnl
+{
+	int		i;
+	int		r;
+	int		l;
+	char	c;
+	char	*tmp;
+}	t_gnl;
 
 void		*ft_memset(void *s, int c, size_t n);
 void		ft_bzero(void *s, size_t n);
@@ -104,10 +113,11 @@ void		ft_lstadd_front(t_list **lst, t_list *n);
 int			ft_lstsize(t_list *lst);
 t_list		*ft_lstlast(t_list *lst);
 void		terminate(char *error);
-void 		free_slice(char **arr, int current, int end);
-int 		get_next_line(int fd, char **line);
+void		free_slice(char **arr, int current, int end);
+int			get_next_line(int fd, char **line);
 long long	ft_stoi(char *str);
 t_bool		not_int(char *s);
+t_bool		ft_strcmp(char *newstr, char *original);
 
 /*
 ** BONUS FUNCTIOS
