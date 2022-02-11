@@ -94,4 +94,4 @@
 |ft_lstiter|void ft_lstiter(t_list *lst, void (*f)(void *))| iterates the list 'lst' and appllies the function 'f' to content of each element|
 |ft_lstmap|t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void(*del)(void *))| iterates the list 'lst' and appllies the function 'f' to content of each element. creates a new list resulting of the successive applications of the function 'f'. The 'del' function is used to delete the content of an element if needed |
 
-Some other functions was added to this library in order to be used in future projects
+Some other functions were added to this library in order to be used in future projects
